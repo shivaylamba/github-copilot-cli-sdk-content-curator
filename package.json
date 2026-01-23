@@ -1,0 +1,67 @@
+{
+  "name": "content-curator",
+  "version": "1.0.0",
+  "description": "AI-powered real-time content curator for short-form video ideas using GitHub Copilot and Exa AI",
+  "type": "module",
+  "bin": {
+    "content-curator": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc && chmod +x dist/index.js",
+    "start": "node dist/index.js",
+    "dev": "tsc --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "content-curator",
+    "ai",
+    "copilot",
+    "github-copilot",
+    "exa",
+    "web-search",
+    "reels",
+    "shorts",
+    "instagram",
+    "youtube",
+    "tiktok",
+    "short-form",
+    "content-ideas",
+    "cli"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/content-curator.git"
+  },
+  "homepage": "https://github.com/your-org/content-curator#readme",
+  "bugs": {
+    "url": "https://github.com/your-org/content-curator/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@github/copilot-sdk": "^0.1.12",
+    "@inquirer/prompts": "^7.0.0",
+    "chalk": "^5.3.0",
+    "clipboardy": "^4.0.0",
+    "commander": "^12.0.0",
+    "dotenv": "^16.4.0",
+    "exa-js": "^2.1.1",
+    "ora": "^8.0.0",
+    "zod": "^3.22.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.3.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
