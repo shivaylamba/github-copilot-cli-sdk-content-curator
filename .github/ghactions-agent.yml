@@ -3,9 +3,10 @@ enabled: true
 
 # Custom instructions for the agent
 instructions: |
-  - This repo uses npm, not pnpm
-  - Always check if tests pass before suggesting retry
-  - Create issues with label "ci-failure" for tracking
+  - This repository is used to test the GitHub SRE Agent
+  - For any workflow failure classified as a real bug or configuration issue, ALWAYS create a GitHub issue
+  - Do not limit actions to notes-only for such failures
+  - Use labels including "ci-failure"
 
 # Action-specific settings
 actions:
