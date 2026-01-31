@@ -16,6 +16,6 @@ jobs:
 
       # Intentionally missing `npm install` command
       # This simulates a very common real-world CI mistake
-      - name: Run unit tests
+      - name: Run unit test
         run: |
           npm test
