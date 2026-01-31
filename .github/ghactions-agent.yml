@@ -1,0 +1,32 @@
+version: 1
+enabled: true
+
+# Custom instructions for the agent
+instructions: |
+  - This repo uses npm, not pnpm
+  - Always check if tests pass before suggesting retry
+  - Create issues with label "ci-failure" for tracking
+
+# Action-specific settings
+actions:
+  retry:
+    enabled: true
+    maxAttempts: 3
+    
+  createIssue:
+    enabled: true
+    labels:
+      - sre-agent
+      - automated
+      - ci-failure
+    assignees: []
+
+# Only monitor specific workflows (empty = all)
+workflows: []
+
+# Ignore patterns
+ignore:
+  conclusions:
+    - cancelled  # Don't process cancelled workflows
+  branches:
+    - "dependabot/*"  # Ignore dependabot branches
