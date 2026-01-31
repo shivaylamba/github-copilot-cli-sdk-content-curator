@@ -1,14 +1,21 @@
-name: CI Fail Test
+name: CI – Real Failure Test
 
 on:
   push:
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
-  fail:
+  test:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Fail intentionally
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Intentionally missing `npm install`
+      # This simulates a very common real-world CI mistake
+      - name: Run unit tests
         run: |
-          echo "Simulating failure"
-          exit 1
+          npm test
