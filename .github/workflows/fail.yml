@@ -1,0 +1,14 @@
+name: CI Fail Test
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  fail:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fail intentionally
+        run: |
+          echo "Simulating failure"
+          exit 1
